@@ -36,15 +36,17 @@ def draw_picture(width, height):
     #Long's bird
     sg.draw_bird(300, 130, 20)
     sg.draw_bird_flock(160, 100, 5, 70)
+    
+    # Draws a 20-pixel tall layer of grass right above the dirt (starts at y=280)
+    # Make sure width matches your canvas width (600)
+    sg.draw_grass_and_trees(0, 280, 600, 20)
+    
+    # Draws dirt across the bottom of the canvas (starts at y=300)
+    sg.draw_dirt(0, 300, 600, 150)
 
 if __name__ == "__main__":
     # Launch the wrapper; only edit starting dimensions of canvas if you would like to
     sg.start(draw_picture, 600, 400)
 
 
- # Draws a 20-pixel tall layer of grass right above the dirt (starts at y=280)
-    # Make sure width matches your canvas width (600)
-    sg.draw_grass_and_trees(0, 280, 600, 20)
-    
-    # Draws dirt across the bottom of the canvas (starts at y=300)
-    sg.draw_dirt(0, 300, 600, 150)
+
